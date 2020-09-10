@@ -20,9 +20,9 @@
                         <template v-for="subItem in item.subs">
                             <el-submenu v-if="subItem.subs" :index="subItem.index" :key="subItem.index">
                                 <template slot="title">{{ subItem.title }}</template>
-                                <el-menu-item v-for="(threeItem, i) in subItem.subs" :key="i" :index="threeItem.index">{{
-                                    threeItem.title
-                                }}</el-menu-item>
+                                <el-menu-item v-for="(threeItem, i) in subItem.subs" :key="i" :index="threeItem.index">
+                                    {{ threeItem.title }}
+                                </el-menu-item>
                             </el-submenu>
                             <el-menu-item v-else :index="subItem.index" :key="subItem.index">{{ subItem.title }}</el-menu-item>
                         </template>
@@ -50,6 +50,29 @@ export default {
                     icon: 'el-icon-lx-home',
                     index: 'dashboard',
                     title: '系统首页'
+                },
+                {
+                    icon: 'el-icon-sunrise',
+                    index: '8',
+                    title: '食材管理',
+                    subs: [
+                        {
+                            index: 'start',
+                            title: '食材库'
+                        },
+                        {
+                            index: 'claim',
+                            title: '食材不宜同食'
+                        },
+                        {
+                            index: 'enabled',
+                            title: '审核食材'
+                        }
+                        //        {
+                        //     index: 'singers',
+                        //     title: '审核食材'
+                        // }
+                    ]
                 },
                 {
                     icon: 'el-icon-lx-cascades',

@@ -20,6 +20,21 @@ export default new Router({
                     meta: { title: '系统首页' }
                 },
                 {
+                    path: '/start',
+                    component: () => import(/* webpackChunkName: "icon" */ '../components/page/work/Start.vue'),
+                    meta: { title: '食材库' }
+                },
+                {
+                    path: '/enabled',
+                    component: () => import(/* webpackChunkName: "icon" */ '../components/page/work/Enabled.vue'),
+                    meta: { title: '食材库' }
+                },
+                {
+                    path: '/claim',
+                    component: () => import(/* webpackChunkName: "icon" */ '../components/page/work/Claim.vue'),
+                    meta: { title: '添加相克食材' }
+                },
+                {
                     path: '/icon',
                     component: () => import(/* webpackChunkName: "icon" */ '../components/page/Icon.vue'),
                     meta: { title: '自定义图标' }
